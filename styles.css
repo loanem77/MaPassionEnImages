@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=La+Belle+Aurore&display=swap');
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: #e4e4e4;
+    background-image:
+        url("assets/theme/pattern.png"),
+        url("assets/theme/pattern.png");
+    background-position:
+        left 0,
+        right 0;
+    background-repeat: repeat-y;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+#website-title {
+    background-color: #070a45;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #e4e4e4;
+}
+
+.global-text {
+    background-color: #8c5178;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #e4e4e4;
+    text-align: center;
+}
+
+/*zone header*/
+header {
+    background-color: #512d45;
+}
+
+.top-nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #e4e4e4;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.social-icons {
+    display: flex;
+    height: 70px;
+    width: 220px;
+    gap: 10px;
+}
+
+/*Réseaux sociaux boutons*/
+.social-icons svg {
+    position: absolute;
+    display: flex;
+    width: 40px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.social-icons .social-link-insta,
+.social-icons .social-link-twitter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: #e4e4e4;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: 0.25s;
+    border-radius: 50px;
+}
+
+.social-icons svg {
+    transform: scale(1);
+}
+
+.social-icons .social-link-insta:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    animation: bounce_613 0.4s linear;
+}
+
+.social-icons .social-link-twitter:hover {
+    background-color: #00ccff;
+    animation: bounce_613 0.4s linear;
+}
+
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+/*Fin des boutons Réseaux Sociaux*/
+/*Fin header*/
+
+h1 {
+    font-family: "La Belle Aurore", 'Times New Roman';
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Frise */
+.liste-images {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 0;
+    display: flow-root;
+}
+
+/*Flèche*/
+.liste-images::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 50px;
+    width: 12px;
+    background: black;
+    transform: translateX(-50%);
+}
+
+.liste-images::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 60px solid black;
+}
+
+/* Images et Polaroid */
+.pic {
+    width: 45%;
+    position: relative;
+    margin-bottom: 50px;
+    clear: both;
+}
+
+.gauche {
+    float: left;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 20px;
+
+}
+
+.droite {
+    float: right;
+    text-align: left;
+}
+
+.polaroid,
+.polaroid2 {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+
+    transition: transform 0.3s ease, z-index 0s;
+    cursor: zoom-in;
+    position: relative;
+}
+
+.polaroid {
+    transform: rotate(-2deg);
+}
+
+.polaroid2 {
+    transform: rotate(2deg);
+}
+
+.polaroid:hover,
+.polaroid2:hover {
+    transform: rotate(0) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-active {
+    position: fixed !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2) !important;
+    z-index: 9999;
+    cursor: zoom-out;
+    rotate: 0deg !important;
+}
+
+.background-pola {
+    width: 100%;
+    height: 200px;
+    border: solid 1px #808080;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.legende-pola {
+    font-size: 0.7rem;
+    color: #555;
+    margin-top: 2px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+.img-title {
+    font-family: "La Belle Aurore", 'Times New Roman';
+    font-size: 1.2rem;
+}
+
+section {
+    background-color: #070a45;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #e4e4e4;
+}
+
+/*Fin Images et Polaroid*/
+
+/*Zone Formulaire*/
+#imageForm {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#imageForm h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#imageForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#imageForm input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#imageForm input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+#imageForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #512d45;
+    color: #e4e4e4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+#imageForm button:hover {
+    background-color: #e4e4e4;
+    color: #512d45;
+    border: solid 1px #512d45;
+}
+
+/*Fin de Formulaire*/
+
+/*Footer*/
+footer {
+    background-color: #512d45;
+    color: #e4e4e4;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 25px 0 0 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+footer ul p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+footer li {
+    font-size: 0.9em;
+    color: #b5b5b5;
+}
+
+/*Fin de Footer*/
